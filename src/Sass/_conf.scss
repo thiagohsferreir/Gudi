@@ -1,0 +1,71 @@
+@use "../Sass/variables";
+
+@mixin vetores($background){
+        
+              
+        background-color: $background;
+        width: 12.6vw;
+        height: 32.5vh;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+}
+@mixin responsivo-vetores($background,$widht ,$altura){
+        @include phone() {
+                background-color: $background;
+                width: $widht;
+                height: $altura;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                }
+                
+              
+        
+}
+@mixin responsivo-vetores($background,$widht ,$altura){
+        @include tablets() {
+                background-color: $background;
+                width: $widht;
+                height: $altura;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                }
+              
+        
+}
+@mixin responsivo-vetores($background,$widht ,$altura){
+        @include laptops() {
+                background-color: $background;
+                width: $widht;
+                height: $altura;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                }
+              
+        
+}
+@mixin responsivo-vetores($background,$widht ,$altura){
+        @include desktops() {
+                background-color: $background;
+                width: $widht;
+                height: $altura;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                }
+              
+        
+}
