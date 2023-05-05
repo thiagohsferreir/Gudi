@@ -8,7 +8,9 @@ descricao: string
 export default function BigCards(props: props) {
   return (
     <div className="propinside">
-        <div className="imgcontainer"><img className="imgcard" src={props.imagem} alt={props.alt} /></div>
+        <div className="imgcontainer">
+          <img className="imgcard" src={props.imagem} alt={props.alt} />
+          </div>
         <aside className="aside">
           <div className="descricao">
             <div className="linha">-</div>

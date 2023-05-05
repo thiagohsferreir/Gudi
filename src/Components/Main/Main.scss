@@ -172,18 +172,30 @@
 
 .Big-Card-Main {
   @include phone() {
+    width: 100%;
+    height: 100%;
     .propinside {
+      justify-content: center;
+      align-items: flex-start;
       width: 100%;
-      background-color: #fff;
       flex-direction: column;
-      height: 75vh;
+      background-color: #fff;
+      height: 60vh;
+      .imgcontainer {
+        width: 100%;
+        height: 80%;
+        .imgcard {
+          width: 100%;
+          height: 100%;
+        }
+      }
       .aside {
         width: 100%;
-        background-image: linear-gradient(#005bd5, #002e6b);
         height: 100%;
-        padding: 15px 0 0 0;
-        text-align: center;
-        gap: 20px;
+        justify-content: center;
+        background-image: linear-gradient(#005bd5, #002e6b);
+        align-items: center;
+        padding: 50px;
         h1.titulo {
           width: 100%;
           font-size: 2em;
@@ -201,11 +213,6 @@
           width: 100%;
         }
       }
-      .imgcard {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-      }
     }
   }
   @include tablets() {
@@ -217,7 +224,7 @@
       width: 100%;
       flex-direction: column;
       background-color: #fff;
-      height: 50vh;
+      height: 60vh;
       .imgcontainer {
         width: 100%;
         height: 80%;
@@ -228,7 +235,7 @@
       }
       .aside {
         width: 100%;
-        height: 150%;
+        height: 100%;
         justify-content: center;
         background-image: linear-gradient(#005bd5, #002e6b);
         align-items: center;
@@ -297,7 +304,7 @@
     }
   }
   @include desktops() {
-   width: 100%;
+    width: 100%;
     height: 100%;
     .propinside {
       justify-content: center;
@@ -344,13 +351,14 @@
   .propinside {
     display: flex;
     width: 100%;
+    height: 80vh;
+
     align-items: center;
-    height: 75.1vh;
 
     background-image: linear-gradient(#005bd5, #002e6b);
     justify-content: space-between;
     aside {
-      width: 50.5%;
+      width: 50%;
       display: flex;
       flex-direction: column;
       gap: 2em;
@@ -359,12 +367,12 @@
         font-family: variables.$bold;
         font-size: 4em;
         letter-spacing: -2px;
-        width: 35vw;
+        width: 40.8vw;
       }
       .descricao {
         display: flex;
         align-items: center;
-        width: 34vw;
+        width: 31vw;
         gap: 2em;
       }
       .linha {
@@ -406,30 +414,43 @@
     }
   }
   img {
-    width: 93%;
-    height: 75vh;
-    margin-bottom: -4px;
-    overflow: hidden;
+    width: 90%;
+    height: 100%;
+  }
+  .imgcontainer {
+    width: 62.5%;
+    height: 100%;
   }
 }
 .CardBranco {
   @include phone() {
     background-color: white;
-    height: 72vh;
-
-    .CardBrancoInside {
+    height: 100vh;
+    display: flex;
+    
+    .containtermaster{
       display: flex;
       flex-direction: column;
-      align-items: center;
-      height: 100%;
-      justify-content: space-between;
-      .aside2 {
-        padding: 0;
+      justify-content: center;
+      .imagemcontainerb{
         width: 100%;
         height: 100%;
-        gap: 20px;
-        padding: 15px 0 15px 0;
-        text-align: center;
+        .imgcardbranco {
+          width: 187.2%;
+          height: 100%;
+        }
+      }
+    }
+    
+    .CardBrancoInside {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      .aside2 {
+        padding: 10px;
+        width: 80%;
+        align-self: center;
         align-items: center;
         .descricao1 {
           width: 80%;
@@ -449,27 +470,38 @@
           width: 100%;
         }
       }
-      .imgcardbranco {
-        width: 100%;
-        height: 100%;
-      }
+      
+      
     }
   }
   @include tablets() {
     background-color: white;
-    height: 100vh;
-    margin-top: 154px;
+    height: 110vh;
     display: flex;
-    justify-content: space-between;
-    .CardBrancoInside {
+    
+    .containtermaster{
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      .imagemcontainerb{
+        width: 100%;
+        height: 100%;
+        .imgcardbranco {
+          width: 187.2%;
+          height: 100%;
+        }
+      }
+    }
+    
+    .CardBrancoInside {
+      display: flex;
       align-items: center;
+      flex-direction: column;
       justify-content: space-between;
       .aside2 {
-        padding: 0;
-        width: 100%;
-        text-align: center;
+        padding: 10px;
+        width: 80%;
+        align-self: center;
         align-items: center;
         .descricao1 {
           width: 80%;
@@ -489,10 +521,8 @@
           width: 100%;
         }
       }
-      .imgcardbranco {
-        width: 100%;
-        height: 100%;
-      }
+      
+      
     }
   }
   @include laptops() {
@@ -582,7 +612,7 @@
     align-items: center;
     justify-content: space-between;
     aside {
-      width: 100vw;
+      width: 53.2%;
       display: flex;
       flex-direction: column;
       padding-left: 2em;
@@ -638,8 +668,11 @@
       }
     }
     img {
-      width: 49.6vw;
+      width: 100%;
       height: 72vh;
+    }
+    .imagemcontainerb {
+      width: 53.4%;
     }
     .imgcardbranco2 {
       display: none;
@@ -648,29 +681,69 @@
 }
 .galeria {
   @include phone() {
-    margin: 0 0 300px 0;
-    .imagem-container {
-    width: 100%;
+    margin-top: 105px;
+    width: 100vw;
+    height: 75vh;
 
-    flex-wrap: wrap;
-      .imagem-w{
-        .botaogaleria{
-          width: 40%;
-        }
-      }      
+    .imagem-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      .imagem-w {
+        width: 50%;
+        height: 100%;
+      }
+      .imagem1 {
+        background: url("../../assets/imgs/Rio.png") no-repeat;
+      }
+      .imagem2 {
+        background: url("../../assets/imgs/Ostras.png") no-repeat;
+        background-size: cover;
+      }
+      .imagem3 {
+        background: url("../../assets/imgs/Caldas.png") no-repeat;
+        background-size: cover;
+      }
+      .imagem4 {
+        background: url("../../assets/imgs/Amazonia.png") no-repeat;
+        background-size: cover;
+      }
+      .botaogaleria {
+        width: 40%;
+      }
     }
   }
   @include tablets() {
-    margin: 155px 0 300px 0;
-    .imagem-container {
-    width: 100%;
+    margin-top: 127px;
+    width: 100vw;
+    height: 75vh;
 
-    flex-wrap: wrap;
-      .imagem-w{
-        .botaogaleria{
-          width: 40%;
-        }
-      }      
+    .imagem-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      .imagem-w {
+        width: 50%;
+        height: 100%;
+      }
+      .imagem1 {
+        background: url("../../assets/imgs/Rio.png") no-repeat;
+      }
+      .imagem2 {
+        background: url("../../assets/imgs/Ostras.png") no-repeat;
+        background-size: cover;
+      }
+      .imagem3 {
+        background: url("../../assets/imgs/Caldas.png") no-repeat;
+        background-size: cover;
+      }
+      .imagem4 {
+        background: url("../../assets/imgs/Amazonia.png") no-repeat;
+        background-size: cover;
+      }
+      .botaogaleria {
+        width: 40%;
+      }
     }
   }
   @include laptops() {
@@ -682,30 +755,24 @@
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-      .imagem-w{
+      .imagem-w {
         width: 50%;
         height: 100%;
       }
       .imagem1 {
-        background: url("../../assets/imgs/Rio.png" ) no-repeat;
-        
+        background: url("../../assets/imgs/Rio.png") no-repeat;
       }
       .imagem2 {
-        background: url("../../assets/imgs/Ostras.png" ) no-repeat ;
-        background-size:cover ;
-
-
+        background: url("../../assets/imgs/Ostras.png") no-repeat;
+        background-size: cover;
       }
       .imagem3 {
-        background: url("../../assets/imgs/Caldas.png" ) no-repeat;
-        background-size:cover ;
-
+        background: url("../../assets/imgs/Caldas.png") no-repeat;
+        background-size: cover;
       }
       .imagem4 {
-        background: url("../../assets/imgs/Amazonia.png" ) no-repeat;
-        background-size:cover ;
-
-
+        background: url("../../assets/imgs/Amazonia.png") no-repeat;
+        background-size: cover;
       }
       .botaogaleria {
         width: 40%;
@@ -721,30 +788,24 @@
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-      .imagem-w{
+      .imagem-w {
         width: 50%;
         height: 100%;
       }
       .imagem1 {
-        background: url("../../assets/imgs/Rio.png" ) no-repeat;
-        
+        background: url("../../assets/imgs/Rio.png") no-repeat;
       }
       .imagem2 {
-        background: url("../../assets/imgs/Ostras.png" ) no-repeat ;
-        background-size:cover ;
-
-
+        background: url("../../assets/imgs/Ostras.png") no-repeat;
+        background-size: cover;
       }
       .imagem3 {
-        background: url("../../assets/imgs/Caldas.png" ) no-repeat;
-        background-size:cover ;
-
+        background: url("../../assets/imgs/Caldas.png") no-repeat;
+        background-size: cover;
       }
       .imagem4 {
-        background: url("../../assets/imgs/Amazonia.png" ) no-repeat;
-        background-size:cover ;
-
-
+        background: url("../../assets/imgs/Amazonia.png") no-repeat;
+        background-size: cover;
       }
       .botaogaleria {
         width: 40%;
@@ -759,87 +820,100 @@
     display: flex;
     justify-content: center;
     height: 40vh;
-    .imagem-w{
-      width: 50%;
+    .imagem-w {
+      padding: 10% 12.5%;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100%;
+
+      height: 37vh;
     }
     .imagem1 {
-      background: url("../../assets/imgs/Rio.png" ) no-repeat;
-      background-size:cover ;
-      height: 100%;
-      
+      background: url("../../assets/imgs/Rio.png") no-repeat center center;
+      height: 37.2vh;
     }
     .imagem2 {
-      background-image: url("../../assets/imgs/Ostras.png" );
-      background-size:cover ;
-
+      background-image: url("../../assets/imgs/Ostras.png");
     }
     .imagem3 {
-      background-image: url("../../assets/imgs/Caldas.png" );
-      background-size:cover ;
-
+      background-image: url("../../assets/imgs/Caldas.png");
     }
     .imagem4 {
-      background-size:cover ;
-      background-image: url("../../assets/imgs/Amazonia.png" );
-    }
-    }
-    button {
-      border-radius: 40px;
-      border: 2px solid white;
-      z-index: 0;
-      backdrop-filter: blur(40px);
-      background: transparent;
-      position: absolute;
-      color: white;
-      font-size: 1.2em;
-      font-family: variables.$light;
-      letter-spacing: 3px;
-      transition: 0.4s;
-
-      width: 15%;
-      height: 50px;
-    }
-
-    button:hover {
-      backdrop-filter: blur(0px);
-      transition: 0.5s;
-      cursor: pointer;
-    }
-    img {
-      position: relative;
-      z-index: 0;
-      width: 100%;
-      height: 41.3vh;
+      background-image: url("../../assets/imgs/Amazonia.png");
     }
   }
+  button {
+    border-radius: 40px;
+    border: 2px solid white;
+    z-index: 0;
+    backdrop-filter: blur(40px);
+    background: transparent;
+    position: absolute;
+    color: white;
+    font-size: 1.2em;
+    font-family: variables.$light;
+    letter-spacing: 3px;
+    transition: 0.4s;
+
+    width: 15%;
+    height: 50px;
+  }
+
+  button:hover {
+    backdrop-filter: blur(0px);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  img {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 41.3vh;
+  }
+}
 
 .galeria-branca {
   @include phone() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
     width: 100%;
+
+    flex-wrap: wrap;
+    height: 100%;
     padding: 0;
+    flex-direction: column;
+
     .texto-container {
-      width: 100%;
       .textos {
+        line-height: 1.8em;
+        text-align: center;
+        font-size: 1em;
+  
+        color: #8b8b8b;
         width: 100%;
-        padding-top: 2em;
+        h3 {
+          font-size: 0.9em;
+          text-align: center;
+        }
       }
     }
+
     .galeriacontainer {
-      display: flex;
+      
       .galeria-branca-fotos {
-        width: 100vw;
-        flex-direction: row;
         gap: 0;
-        .foto{
-          width:48%;
+        width: 100%;
+  
+
+        .foto {
           background-repeat: no-repeat;
+          display: flex;
+          padding: 80px;
           background-size: cover;
-          height: 26.8vh;
-          color:transparent
+          background-position: center;
+          color: transparent;
         }
         .foto1 {
           background-image: url(../../assets/imgs/1.png);
@@ -847,49 +921,62 @@
         .foto2 {
           background-image: url(../../assets/imgs/2.png);
         }
-        .foto3{
-          
+        .foto3 {
           background-image: url(../../assets/imgs/3.png);
-          
         }
         .foto4 {
-          
           background-image: url(../../assets/imgs/4.png);
-          
         }
         .foto5 {
-          
           background-image: url(../../assets/imgs/5.png);
-          
         }
-        .foto6{
-          
+        .foto6 {
           background-image: url(../../assets/imgs/6.png);
         }
       }
     }
   }
   @include tablets() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
     width: 100%;
+
+    flex-wrap: wrap;
+    height: 100%;
     padding: 0;
+    flex-direction: column;
+
     .texto-container {
-      width: 100%;
       .textos {
+        line-height: 1.8em;
+        text-align: center;
+        font-size: 1em;
+  
+        color: #8b8b8b;
         width: 100%;
-        padding-top: 2em;
+        h3 {
+          font-size: 0.9em;
+          text-align: center;
+        }
       }
     }
+
     .galeriacontainer {
-        width: 100%;
-        display: flex;
+      
       .galeria-branca-fotos {
+        gap: 0;
         width: 100%;
-        .foto{
-          width: 32%;
+        
+
+        .foto {
           background-repeat: no-repeat;
-          background-size: contain;
-          height: 28vh;
-          color:transparent
+          display: flex;
+          padding: 80px;
+          background-size: cover;
+          background-position: center;
+          color: transparent;
         }
         .foto1 {
           background-image: url(../../assets/imgs/1.png);
@@ -897,51 +984,67 @@
         .foto2 {
           background-image: url(../../assets/imgs/2.png);
         }
-        .foto3{
-          
+        .foto3 {
           background-image: url(../../assets/imgs/3.png);
-          
         }
         .foto4 {
-          
           background-image: url(../../assets/imgs/4.png);
-          
         }
         .foto5 {
-          
           background-image: url(../../assets/imgs/5.png);
-          
         }
-        .foto6{
-          
+        .foto6 {
           background-image: url(../../assets/imgs/6.png);
         }
       }
     }
   }
   @include laptops() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
     width: 100%;
-    padding: 0;
-    .texto-container {
-      width: 100%;
-      .textos {
-        width: 100%;
-        padding-top: 2em;
+
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 8em;
+    flex-direction: column;
+
+    .textos {
+      line-height: 1.8em;
+      text-align: center;
+      font-size: 1.5em;
+
+      color: #8b8b8b;
+      width: 30vw;
+      h3 {
+        font-size: 0.8em;
+        text-align: center;
       }
     }
     .galeriacontainer {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       .galeria-branca-fotos {
-        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        .foto{
-          width: 27%;
+        gap: 2em;
+        width: 100%;
+        text-align: center;
+
+        .foto {
           background-repeat: no-repeat;
-          background-size: contain;
-          height: 27vh;
-          color:transparent
+          display: flex;
+          padding: 90px;
+          background-size: cover;
+          background-position: center;
+          color: transparent;
         }
         .foto1 {
           background-image: url(../../assets/imgs/1.png);
@@ -949,77 +1052,85 @@
         .foto2 {
           background-image: url(../../assets/imgs/2.png);
         }
-        .foto3{
-          
+        .foto3 {
           background-image: url(../../assets/imgs/3.png);
-          
         }
         .foto4 {
-          
           background-image: url(../../assets/imgs/4.png);
-          
         }
         .foto5 {
-          
           background-image: url(../../assets/imgs/5.png);
-          
         }
-        .foto6{
-          
+        .foto6 {
           background-image: url(../../assets/imgs/6.png);
         }
       }
     }
   }
   @include desktops() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
     width: 100%;
-    padding: 0;
-    .texto-container {
-      width: 100%;
-      .textos {
-        width: 100%;
-        padding-top: 2em;
+
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 8em;
+    flex-direction: column;
+
+    .textos {
+      line-height: 1.8em;
+      text-align: center;
+      font-size: 1.5em;
+      color: #8b8b8b;
+      width: 30vw;
+      h3 {
+        font-size: 0.8em;
+        text-align: center;
       }
     }
     .galeriacontainer {
       display: flex;
-      width: 100%;
-      .galeria-branca-fotos {
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        .foto{
-          width: 27%;
-          background-repeat: no-repeat;
-          background-size: contain;
-          height: 27vh;
-          color:transparent
-        }
-        .foto1 {
-          background-image: url(../../assets/imgs/1.png);
-        }
-        .foto2 {
-          background-image: url(../../assets/imgs/2.png);
-        }
-        .foto3{
-          
-          background-image: url(../../assets/imgs/3.png);
-          
-        }
-        .foto4 {
-          
-          background-image: url(../../assets/imgs/4.png);
-          
-        }
-        .foto5 {
-          
-          background-image: url(../../assets/imgs/5.png);
-          
-        }
-        .foto6{
-          
-          background-image: url(../../assets/imgs/6.png);
-        }
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+    }
+    .galeria-branca-fotos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+      width: 82%;
+      text-align: center;
+
+      .foto {
+        background-repeat: no-repeat;
+        display: flex;
+        padding: 120px;
+        background-size: cover;
+        background-position: center;
+        color: transparent;
+      }
+      .foto1 {
+        background-image: url(../../assets/imgs/1.png);
+      }
+      .foto2 {
+        background-image: url(../../assets/imgs/2.png);
+      }
+      .foto3 {
+        background-image: url(../../assets/imgs/3.png);
+      }
+      .foto4 {
+        background-image: url(../../assets/imgs/4.png);
+      }
+      .foto5 {
+        background-image: url(../../assets/imgs/5.png);
+      }
+      .foto6 {
+        background-image: url(../../assets/imgs/6.png);
       }
     }
   }
@@ -1027,6 +1138,8 @@
   justify-content: center;
   align-items: center;
   gap: 5em;
+  width: 100%;
+
   flex-wrap: wrap;
   height: 100%;
   padding: 8em;
@@ -1043,20 +1156,29 @@
       text-align: center;
     }
   }
+  .galeriacontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
   .galeria-branca-fotos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 2em;
-    width: 60vw;
+    width: 82%;
     text-align: center;
-    .foto{
-      width: 27%;
+
+    .foto {
       background-repeat: no-repeat;
-      background-size: contain;
-      height: 27vh;
-      color:transparent
+      display: flex;
+      padding: 120px;
+      background-size: cover;
+      background-position: center;
+      color: transparent;
     }
     .foto1 {
       background-image: url(../../assets/imgs/1.png);
@@ -1064,63 +1186,101 @@
     .foto2 {
       background-image: url(../../assets/imgs/2.png);
     }
-    .foto3{
-      
+    .foto3 {
       background-image: url(../../assets/imgs/3.png);
-      
     }
     .foto4 {
-      
       background-image: url(../../assets/imgs/4.png);
-      
     }
     .foto5 {
-      
       background-image: url(../../assets/imgs/5.png);
-      
     }
-    .foto6{
-      
+    .foto6 {
       background-image: url(../../assets/imgs/6.png);
     }
-    }
   }
-  
+}
+
 .vetores-container {
   @include phone() {
+    gap: 2%;
     width: 100%;
+    height: 50vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    padding-top: 2em;
-    flex-wrap: wrap;
-    padding-bottom: 2em;
+    
+
+    .blue-bg {
+      background-color: #005bd5;
+      width: 25%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      height: 50%;
+      padding: 2px;
+      font-size: 0.9em;
+      color: white;
+    }
+    .grey-bg {
+      background-color: #eeeeee;
+      width: 25%;
+      display: flex;
+      padding: 5px;
+      align-items: center;
+      text-align: center;
+      color: #005bd5;
+      font-size: 1em;
+
+      height: 50%;
+    }
     .vetores {
-      gap: 0;
       .imagemvetores {
-        width: 15vw;
-        height: 70px;
+        width: 50%;
+        margin-bottom: 20px;
       }
       .textovetor {
-        width: 35vw;
-
+        width: 100%;
         font-size: 1em;
       }
     }
   }
   @include tablets() {
+    gap: 2%;
     width: 100%;
-    height: 70vh;
-    padding: 25px;
-    flex-wrap: wrap;
+    height: 50vh;
+    display: flex;
     justify-content: center;
     align-items: center;
+    
+
+    .blue-bg {
+      background-color: #005bd5;
+      width: 25%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      height: 50%;
+      padding: 2px;
+      font-size: 0.9em;
+      color: white;
+    }
+    .grey-bg {
+      background-color: #eeeeee;
+      width: 25%;
+      display: flex;
+      padding: 5px;
+      align-items: center;
+      text-align: center;
+      color: #005bd5;
+      font-size: 1em;
+
+      height: 50%;
+    }
     .vetores {
-      width: 100%;
-      gap: 0;
       .imagemvetores {
-        width: 30%;
-        height: 70%;
+        width: 50%;
+        margin-bottom: 20px;
       }
       .textovetor {
         width: 100%;
@@ -1129,80 +1289,78 @@
     }
   }
   @include laptops() {
+    gap: 20px;
     width: 100%;
     height: 70vh;
-    padding: 25px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px;
+
+    .blue-bg {
+      background-color: #005bd5;
+      width: 25%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 50%;
+      color: white;
+    }
+    .grey-bg {
+      background-color: #eeeeee;
+      width: 25%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #005bd5;
+      justify-content: center;
+      height: 50%;
+    }
     .vetores {
-      width: 100%;
-      gap: 0;
       .imagemvetores {
-        width: 30%;
-        height: 70%;
+        width: 50%;
+        margin-bottom: 20px;
       }
       .textovetor {
         width: 100%;
-        font-size: 1em;
+        font-size: 1.5em;
       }
     }
   }
   @include desktops() {
-    width: 100%;
-    height: 70vh;
-    padding: 25px;
-    flex-wrap: wrap;
+    height: 80vh;
+    display: flex;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
-    .vetores {
-      width: 100%;
-      gap: 0;
-      .imagemvetores {
-        width: 30%;
-        height: 70%;
-      }
-      .textovetor {
-        width: 100%;
-        font-size: 1em;
-      }
-    }
-  }
-  width: 100%;
-  height: 70vh;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
 
-  .grey-bg {
-    @include responsivo-vetores(#eeeeee, 35%, 45%);
-    @include vetores(#eeeeee);
+    .grey-bg {
+      @include responsivo-vetores(#eeeeee, 30%, 45%);
+      @include vetores(#eeeeee);
 
-    img {
-      width: 6vw;
-      height: 11vh;
-      margin-bottom: 20px;
+      img {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+      h3 {
+        text-align: center;
+        width: 10vw;
+        font-size: 1.5em;
+        color: variables.$secondary-color;
+      }
     }
-    h3 {
-      text-align: center;
-      width: 8vw;
-      font-size: 1.5em;
-      color: variables.$secondary-color;
-    }
-  }
-  .blue-bg {
-    @include responsivo-vetores(variables.$secondary-color, 40%, 45%);
-    @include vetores(variables.$secondary-color);
-    img {
-      width: 6vw;
-      height: 11vh;
-      margin-bottom: 20px;
-    }
-    h3 {
-      text-align: center;
-      width: 9vw;
-      font-size: 1.5em;
-      color: #fff;
+    .blue-bg {
+      @include responsivo-vetores(variables.$secondary-color, 30%, 45%);
+      @include vetores(variables.$secondary-color);
+      img {
+        width: 50%;
+        margin-bottom: 20px;
+      }
+      h3 {
+        text-align: center;
+        width: 15vw;
+        font-size: 1.5em;
+        color: #fff;
+      }
     }
   }
 }

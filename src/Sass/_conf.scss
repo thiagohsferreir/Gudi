@@ -4,8 +4,8 @@
         
               
         background-color: $background;
-        width: 12.6vw;
-        height: 32.5vh;
+        width: 20%;
+        height: 50%;
         
         display: flex;
         justify-content: center;
@@ -17,40 +17,25 @@
                 background-color: $background;
                 width: $widht;
                 height: $altura;
-                
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
                 }
                 
               
         
 }
-@mixin responsivo-vetores($background,$widht ,$altura){
+@mixin responsivo-vetores($background, $widht, $altura){
         @include tablets() {
                 background-color: $background;
                 width: $widht;
                 height: $altura;
-                
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
                 }
               
         
 }
-@mixin responsivo-vetores($background,$widht ,$altura){
+@mixin responsivo-vetores($background, $widht, $altura){
         @include laptops() {
                 background-color: $background;
                 width: $widht;
                 height: $altura;
-                
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
                 }
               
         

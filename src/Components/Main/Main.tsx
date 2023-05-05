@@ -29,7 +29,8 @@ export default function Main() {
             name="Pesquisar"
             id="main-input"
           />
-          <button>BUSCAR</button>
+          <div className="btncontainer">
+            <button>BUSCAR</button></div>
         </form>
       </section>
       <section className="Big-Card-Main">
@@ -68,8 +69,8 @@ export default function Main() {
             </div>
             <div className="galeriacontainer">
               <div className="galeria-branca-fotos">
-                <div className="foto foto1">aaaaaaaaaa</div>
-                <div className="foto foto2">aaaaaaaaa</div>
+                <div className="foto foto1">a</div>
+                <div className="foto foto2">a</div>
                 <div className="foto foto3">a</div>
                 <div className="foto foto4">a</div>
                 <div className="foto foto5">a</div>
