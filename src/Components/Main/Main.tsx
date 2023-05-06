@@ -60,7 +60,10 @@ export default function Main() {
             <Galeria  botao="RIO DE JANEIRO" botao2="RIO DAS OSTRAS" botao3=" CALDAS NOVAS" botao4="AMAZÔNIA" />
             
           </div>
-          <div className="galeria-branca">
+         
+            
+      </section>
+      <div className="galeria-branca">
             <div className="texto-container">
               <div className="textos">
                 <h3>use a hashtag #brasilisverigudi</h3>
@@ -105,7 +108,7 @@ export default function Main() {
                 />
               </div>
             </section>
-            <section className="fale-conosco">
+      <section className="fale-conosco">
               <h1>Fale conosco</h1>
               <form action="">
                 <input className="input" type="email" placeholder="Digite seu melhor email" />
@@ -114,7 +117,6 @@ export default function Main() {
                 <button className="buttoninput">ENVIAR</button>
               </form>
             </section>
-      </section>
     </main>
   );
 }

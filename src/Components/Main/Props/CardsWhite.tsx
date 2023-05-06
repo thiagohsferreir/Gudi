@@ -9,9 +9,6 @@ export default function CardsWhite(props: props) {
   return (
     <div className="CardBranco">
       <div className="CardBrancoInside">
-        <div className="imgcontainerbranco">
-          <img className="imgcardbranco2" src={props.imagem} alt={props.alt} />
-        </div>
 
         <div className="containtermaster">
           <aside className="aside2">

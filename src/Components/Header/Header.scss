@@ -81,108 +81,28 @@ header {
       }
     .logo2{
       display: none;
-      position: absolute;
+      position: relative;
     }
     .logophone {
-      width: 20vw;
+      width: 100%;
       align-self: center;
      }
   }
   @include laptops() {
-    width: 100vw;
-    background-color: variables.$secondary-color;
-    height: 30vh;
-    color: white;
-    display: flex;
-    position: static;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-      nav{
-        flex-direction: column;
-      width: 100vw;
-        gap: 20px;
-        ul{
-          justify-content: space-around;
-          width: 100%;
-          gap: 10px;
-          flex-wrap: wrap;
-          li{
-           font-size: 1em;
-           border: 2px solid white;
-           width: 30%;
-          }
+    img{
+      width: 15vw;
+    }
+    font-size: 0.8em;
+    
           .agendar{
-            width: 90vw;
+            font-size: 0.8em;
             color: variables.$secondary-color;
             background-color: white;
           }
-        }
-      }
-    .logo2{
-      display: none;
-      position: absolute;
-    }
-    .logophone {
-      width: 20vw;
-      align-self: center;
-     }
-  }
-  @include desktops() {
-    background-color: variables.$primary-color;
-  color: variables.$text-color-s;
-  display: flex;
-  height: 10%;
-  position: fixed;
-  nav {
-    display: flex;
-    width: 100vw;
-    padding: 0 5em 0 5em;
-    align-items: center;
-    justify-content: space-between;
-    ul {
-      list-style: none;
-      display: flex;
-      width: 43vw;
-      justify-content: space-around;
   
-      li {
-        height: 6vh;
-        font-size: 1em;
-        display: flex;
-        border-radius: 25px;
-        align-items: center;
-        justify-content: center;
-      }
-      li:hover {
-        background-color: variables.$secondary-color;
-        color: variables.$text-color-p;
-        border-radius: 25px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-  
-      .agendar {
-        background-color: variables.$secondary-color;
-        color: variables.$text-color-p;
-        border-radius: 30px;
-        font-family: variables.$light;
-        letter-spacing: 4px;
-        width: 15vw;
-      }
-  
-      .agendar:hover {
-        background-color: white;
-        border: 3px solid variables.$secondary-color;
-        color: variables.$text-color-s;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-  }
- 
+   
   }
   
-  }
   background-color: variables.$primary-color;
   color: variables.$text-color-s;
   display: flex;
